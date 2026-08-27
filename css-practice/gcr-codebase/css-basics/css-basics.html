@@ -1,0 +1,1296 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML CSS Assignment</title>
+
+    <style>
+
+        /* Common CSS */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #222;
+        }
+
+        section {
+            padding: 50px;
+            margin: 20px 0;
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+
+
+        /* ==========================================
+           QUESTION 1 - PORTFOLIO
+        ========================================== */
+
+        .portfolio {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #eaf2f8;
+        }
+
+        .portfolio header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #1b2631;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .portfolio header h1 {
+            font-size: 1.8rem;
+        }
+
+        .portfolio nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .portfolio main {
+            flex: 1;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 120px 10% 50px;
+        }
+
+        .portfolio-text {
+            width: 55%;
+        }
+
+        .portfolio-text h2 {
+            font-size: 3rem;
+            color: #21618c;
+        }
+
+        .portfolio-text p {
+            font-size: 1.2em;
+            line-height: 1.7;
+        }
+
+        .profile {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid #21618c;
+        }
+
+        .portfolio footer {
+            background-color: #1b2631;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+
+        /* ==========================================
+           QUESTION 2 - INFORMATION PAGE
+        ========================================== */
+
+        .info header {
+            background-color: #154360;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .info nav {
+            background-color: #212f3c;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .info nav a {
+            color: white;
+            margin: 20px;
+            text-decoration: none;
+        }
+
+        .info section {
+            min-height: 60vh;
+            margin: 0;
+            padding: 70px 10%;
+            color: white;
+            border-bottom: 5px solid white;
+        }
+
+        .linear {
+            background: linear-gradient(to right, #3498db, #154360);
+            background-attachment: fixed;
+        }
+
+        .radial {
+            background: radial-gradient(circle, #f5b041, #a04000);
+            background-attachment: fixed;
+        }
+
+        .normal {
+            background-color: #27ae60;
+        }
+
+        .info section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .info section p {
+            padding: 20px;
+            margin-top: 20px;
+            border: 2px solid white;
+            font-size: 1.1rem;
+        }
+
+        .info footer {
+            background-color: #154360;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        /* ==========================================
+           QUESTION 3 - TEAM MEMBERS
+        ========================================== */
+
+        .team {
+            background-color: #ecf0f1;
+            text-align: center;
+        }
+
+        .team-box {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .card {
+            flex: 1;
+            padding: 25px;
+            margin: 10px;
+            background-color: white;
+            border: 2px solid #bbb;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px #bbb;
+        }
+
+        .leader {
+            background-color: #d6eaf8;
+            border: 3px solid #2874a6;
+        }
+
+        @media (max-width: 600px) {
+            .team-box {
+                flex-direction: column;
+            }
+        }
+
+
+        /* ==========================================
+           QUESTION 4 - ARTICLE
+        ========================================== */
+
+        .article {
+            background-color: white;
+            padding: 50px 10%;
+        }
+
+        .article h1 {
+            font-size: 2.8rem;
+        }
+
+        .article p {
+            margin: 25px 0;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .article p::first-letter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2874a6;
+        }
+
+        .article p::first-line {
+            font-weight: bold;
+        }
+
+        .article mark {
+            background-color: yellow;
+        }
+
+        .article blockquote {
+            background-color: #d6eaf8;
+            border-left: 6px solid #2874a6;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+
+        /* ==========================================
+           QUESTION 5 - PRICING
+        ========================================== */
+
+        .pricing {
+            text-align: center;
+            background-color: #f8f9f9;
+        }
+
+        .plans {
+            display: flex;
+            gap: 20px;
+        }
+
+        .plan {
+            flex: 1;
+            padding: 30px;
+            border: 2px solid #ccc;
+            border-radius: 12px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+        }
+
+        .plan:hover {
+            transform: scale(1.05);
+            background-color: #eaf2f8;
+        }
+
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            flex: 1;
+        }
+
+        .plan li {
+            padding: 8px;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .plan a {
+            background-color: #2874a6;
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        .popular {
+            border: 4px solid orange;
+        }
+
+
+        /* ==========================================
+           QUESTION 6 - PHOTO GALLERY
+        ========================================== */
+
+        .gallery-section {
+            background-color: #17202a;
+        }
+
+        .gallery-section h1 {
+            color: white;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .photo {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px black;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .photo:hover img {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            opacity: 0;
+        }
+
+        .photo:hover .caption {
+            opacity: 1;
+        }
+
+        @media (max-width: 700px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        /* ==========================================
+           QUESTION 7 - CONTACT FORM
+        ========================================== */
+
+        .contact {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d6eaf8;
+        }
+
+        .contact form {
+            width: 500px;
+            max-width: 100%;
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px #aaa;
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+        }
+
+        .input-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-box input,
+        .input-box textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 7px;
+        }
+
+        .input-box input:focus,
+        .input-box textarea:focus {
+            border-color: #2874a6;
+            outline: none;
+        }
+
+        .contact button {
+            padding: 12px 25px;
+            background-color: #2874a6;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+
+
+        /* ==========================================
+           QUESTION 8 - DASHBOARD
+        ========================================== */
+
+        .dashboard {
+            min-height: 100vh;
+        }
+
+        .dashboard header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #212f3d;
+            color: white;
+            padding: 15px 25px;
+            z-index: 10;
+        }
+
+        .dashboard-body {
+            display: flex;
+            padding-top: 60px;
+        }
+
+        .sidebar {
+            width: 220px;
+            min-height: calc(100vh - 60px);
+            background-color: #34495e;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin-bottom: 10px;
+            background-color: #2c3e50;
+        }
+
+        .dashboard-content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .boxes {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            flex: 1;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 5px 15px #ccc;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 700px) {
+
+            .dashboard-body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+        }
+
+
+        /* ==========================================
+           QUESTION 9 - NEWSPAPER
+        ========================================== */
+
+        .newspaper {
+            background-color: #e5e7e9;
+            padding: 40px 8%;
+        }
+
+        .newspaper h1 {
+            column-span: all;
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            border-bottom: 3px solid black;
+            padding-bottom: 15px;
+        }
+
+        .news-content {
+            column-count: 3;
+            column-gap: 35px;
+            text-align: justify;
+            font-family: Georgia, serif;
+        }
+
+        .news-content img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            float: left;
+            margin: 0 15px 10px 0;
+        }
+
+        .news-content p {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 800px) {
+            .news-content {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .news-content {
+                column-count: 1;
+            }
+        }
+
+
+        /* ==========================================
+           QUESTION 10 - COMPLETE WEBSITE
+        ========================================== */
+
+        .complete header {
+            position: sticky;
+            top: 0;
+            background-color: #1b2631;
+            color: white;
+            padding: 20px 5%;
+            z-index: 20;
+        }
+
+        .complete header a {
+            color: white;
+            margin-right: 20px;
+        }
+
+        .hero {
+            position: relative;
+            height: 70vh;
+            background-image:
+                linear-gradient(rgba(0,0,0,0.5),
+                rgba(0,0,0,0.5)),
+                url("https://picsum.photos/1600/800");
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+        }
+
+        .about {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background-color: #d6eaf8;
+            border: 3px solid #2874a6;
+            outline: 3px solid #aed6f1;
+        }
+
+        .about div {
+            flex: 1;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .services {
+            text-align: center;
+        }
+
+        .service-boxes {
+            display: flex;
+            gap: 20px;
+        }
+
+        .service {
+            flex: 1;
+            padding: 30px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px #ccc;
+            position: relative;
+        }
+
+        .service::after {
+            content: "★";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+
+        .final-contact {
+            background:
+                radial-gradient(circle, #d6eaf8, #5dade2);
+        }
+
+        .final-contact form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .final-contact input,
+        .final-contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #2874a6;
+            border-radius: 7px;
+        }
+
+        .final-contact button {
+            padding: 12px 25px;
+            background-color: #1b4f72;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+
+        .complete footer {
+            background-color: #17202a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 700px) {
+
+            .about,
+            .service-boxes {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- ======================================================
+     QUESTION 1
+====================================================== -->
+
+<div class="portfolio">
+
+    <header>
+
+        <h1>Khagesh Goswami</h1>
+
+        <nav>
+            <a href="#q1">Home</a>
+            <a href="#q2">About</a>
+            <a href="#q7">Contact</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="portfolio-text">
+
+            <h2>Hello, I am Khagesh</h2>
+
+            <p>
+                I am a Computer Science student. I am interested in
+                programming, web development and learning new technologies.
+            </p>
+
+        </div>
+
+        <img
+            class="profile"
+            src="https://picsum.photos/300"
+            alt="My Profile Picture"
+        >
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Khagesh Goswami</p>
+    </footer>
+
+</div>
+
+
+<!-- ======================================================
+     QUESTION 2
+====================================================== -->
+
+<div class="info" id="q2">
+
+    <header>
+        <h1>About My Favorite Destination</h1>
+    </header>
+
+    <nav>
+        <a href="#intro">Introduction</a>
+        <a href="#culture">Culture</a>
+        <a href="#travel">Travel</a>
+    </nav>
+
+    <main>
+
+        <section class="linear" id="intro">
+
+            <h2>Introduction</h2>
+
+            <p>
+                My favorite destination is a beautiful place with
+                natural beauty, interesting places and peaceful surroundings.
+            </p>
+
+        </section>
+
+        <section class="radial" id="culture">
+
+            <h2>Culture</h2>
+
+            <p>
+                The place has a rich culture and traditional lifestyle.
+                Visitors can enjoy local food and historical places.
+            </p>
+
+        </section>
+
+        <section class="normal" id="travel">
+
+            <h2>Travel Experience</h2>
+
+            <p>
+                Travelling gives us an opportunity to explore new places,
+                meet new people and make good memories.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Travel Page</p>
+    </footer>
+
+</div>
+
+
+<!-- ======================================================
+     QUESTION 3
+====================================================== -->
+
+<section class="team">
+
+    <h1>Our Team Members</h1>
+
+    <div class="team-box">
+
+        <div class="card leader">
+
+            <h2>Rahul Sharma</h2>
+
+            <h3>Team Lead</h3>
+
+            <p>
+                Rahul manages the team and helps everyone complete
+                their work on time.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Priya Singh</h2>
+
+            <h3>Designer</h3>
+
+            <p>
+                Priya creates simple and attractive designs for
+                websites and applications.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Aman Verma</h2>
+
+            <h3>Developer</h3>
+
+            <p>
+                Aman works on coding and developing different
+                software projects.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     QUESTION 4
+====================================================== -->
+
+<section class="article">
+
+    <h1>The Importance of Learning Technology</h1>
+
+    <p>
+        Written by Khagesh Goswami | August 27, 2026
+    </p>
+
+    <p>
+        Technology has become an important part of our daily life.
+        Students use technology for learning, communication and many
+        other activities.
+    </p>
+
+    <p>
+        Learning <mark>programming</mark> helps students improve their
+        logical thinking and problem-solving skills.
+    </p>
+
+    <p>
+        The internet has made education easier because students can
+        find information about almost every subject online.
+    </p>
+
+    <blockquote>
+        "The beautiful thing about learning is that nobody can
+        take it away from you."
+    </blockquote>
+
+    <p>
+        Regular practice is very important when learning a new skill.
+        Even a small amount of practice every day can help us improve.
+    </p>
+
+    <p>
+        Technology provides many opportunities for students.
+        Therefore, students should learn new technologies and use
+        them in a responsible way.
+    </p>
+
+</section>
+
+
+<!-- ======================================================
+     QUESTION 5
+====================================================== -->
+
+<section class="pricing">
+
+    <h1>Our Pricing Plans</h1>
+
+    <div class="plans">
+
+        <div class="plan">
+
+            <h2>Basic</h2>
+
+            <p class="price">₹499</p>
+
+            <ul>
+                <li>5 Projects</li>
+                <li>10 GB Storage</li>
+                <li>Email Support</li>
+            </ul>
+
+            <a href="#">Choose Plan</a>
+
+        </div>
+
+
+        <div class="plan popular">
+
+            <h2>Standard</h2>
+
+            <p class="price">₹999</p>
+
+            <ul>
+                <li>15 Projects</li>
+                <li>50 GB Storage</li>
+                <li>Priority Support</li>
+                <li>Extra Features</li>
+            </ul>
+
+            <a href="#">Choose Plan</a>
+
+        </div>
+
+
+        <div class="plan">
+
+            <h2>Premium</h2>
+
+            <p class="price">₹1499</p>
+
+            <ul>
+                <li>Unlimited Projects</li>
+                <li>100 GB Storage</li>
+                <li>24/7 Support</li>
+            </ul>
+
+            <a href="#">Choose Plan</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     QUESTION 6
+====================================================== -->
+
+<section class="gallery-section">
+
+    <h1>My Photo Gallery</h1>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1015/600/400"
+                 alt="Mountain">
+            <div class="caption">Beautiful Mountain</div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1016/600/400"
+                 alt="Nature">
+            <div class="caption">Beautiful Nature</div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1018/600/400"
+                 alt="Landscape">
+            <div class="caption">Beautiful Landscape</div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1019/600/400"
+                 alt="Forest">
+            <div class="caption">Green Forest</div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1020/600/400"
+                 alt="River">
+            <div class="caption">Beautiful River</div>
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1024/600/400"
+                 alt="Animal">
+            <div class="caption">Wildlife</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     QUESTION 7
+====================================================== -->
+
+<section class="contact">
+
+    <form>
+
+        <h1>Contact Me</h1>
+
+        <div class="input-box">
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name">
+        </div>
+
+        <div class="input-box">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+        </div>
+
+        <div class="input-box">
+            <label>Subject</label>
+            <input type="text" placeholder="Enter subject">
+        </div>
+
+        <div class="input-box">
+            <label>Message</label>
+            <textarea rows="5"
+                      placeholder="Write your message"></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+
+<!-- ======================================================
+     QUESTION 8
+====================================================== -->
+
+<section class="dashboard">
+
+    <header>
+        <h2>My Dashboard</h2>
+    </header>
+
+    <div class="dashboard-body">
+
+        <aside class="sidebar">
+
+            <a href="#">Dashboard</a>
+            <a href="#">Profile</a>
+            <a href="#">Projects</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+
+        </aside>
+
+        <main class="dashboard-content">
+
+            <h1>Dashboard</h1>
+
+            <div class="boxes">
+
+                <div class="box">
+
+                    <h2>Total Projects</h2>
+
+                    <p>
+                        I have 12 projects in total.
+                    </p>
+
+                </div>
+
+                <div class="box">
+
+                    <h2>Completed Tasks</h2>
+
+                    <p>
+                        I have completed 85 tasks.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     QUESTION 9
+====================================================== -->
+
+<section class="newspaper">
+
+    <div class="news-content">
+
+        <h1>Technology Daily</h1>
+
+        <img src="https://picsum.photos/400/300"
+             alt="Technology">
+
+        <p>
+            Technology is changing the world very quickly. New
+            inventions are making our daily life easier and more
+            comfortable.
+        </p>
+
+        <p>
+            Artificial Intelligence is becoming an important part
+            of modern technology. It is being used in education,
+            healthcare, business and entertainment.
+        </p>
+
+        <p>
+            Students are also becoming interested in programming.
+            Learning computer skills can help students prepare for
+            their future careers.
+        </p>
+
+        <p>
+            The internet has made information easily available.
+            People can learn new skills from different online
+            educational platforms.
+        </p>
+
+        <p>
+            In the future, technology will continue to grow and
+            create new opportunities for everyone.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     QUESTION 10
+====================================================== -->
+
+<div class="complete">
+
+    <header>
+
+        <h1>My Complete Website</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero -->
+
+    <section class="hero" id="home">
+
+        <div>
+            <h1>Welcome to My Website</h1>
+
+            <p>
+                A simple website made using HTML and CSS.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section class="about" id="about">
+
+        <div>
+
+            <h2>About Me</h2>
+
+            <p>
+                My name is Khagesh. I am a Computer Science student
+                and I enjoy learning programming and web development.
+            </p>
+
+            <blockquote>
+                "Learning never stops."
+            </blockquote>
+
+        </div>
+
+        <div>
+
+            <img src="https://picsum.photos/600/400"
+                 alt="About Me Image">
+
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+
+    <section class="services" id="services">
+
+        <h2>My Services</h2>
+
+        <div class="service-boxes">
+
+            <div class="service">
+
+                <h3>Web Development</h3>
+
+                <p>
+                    I can create simple and responsive websites.
+                </p>
+
+            </div>
+
+            <div class="service">
+
+                <h3>Programming</h3>
+
+                <p>
+                    I work with programming languages and solve
+                    coding problems.
+                </p>
+
+            </div>
+
+            <div class="service">
+
+                <h3>Data Science</h3>
+
+                <p>
+                    I am learning data science and machine learning.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section class="final-contact" id="contact">
+
+        <h2>Contact Me</h2>
+
+        <form>
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Your Email">
+
+            <textarea rows="5"
+                      placeholder="Your Message"></textarea>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Khagesh Goswami. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
+```
